@@ -1,0 +1,16 @@
+apiVersion: app/v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: 253040002935.dkr.ecr.ap-southeast-2.amazonaws.com/maven-application:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
